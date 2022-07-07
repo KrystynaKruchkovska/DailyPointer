@@ -17,5 +17,4 @@ class RootControllerPresenter: AnyPresenter {
     var router: AnyRouter?
     var view: AnyView?
     var interactor: AnyInteractor?
-    
 }

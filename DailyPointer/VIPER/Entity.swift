@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct Post: Codable {
+    
+    var title:String
+    var description:String
+    var location: Location
+}
+
+struct Location: Codable {
+    var lat:Double
+    var long:Double
+}

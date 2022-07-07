@@ -24,9 +24,9 @@ class Router: AnyRouter {
         let router = Router()
         
         //Asign VIP
-        var view: AnyView = RootViewController()
+        var view: AnyView = RootViewController(locationManager: LacationManager())
         var presenter: AnyPresenter = RootControllerPresenter()
-        var interactor: AnyInteractor = MainInteractor()
+        var interactor: AnyInteractor = MapInteractor()
         
         view.presenter = presenter
         
