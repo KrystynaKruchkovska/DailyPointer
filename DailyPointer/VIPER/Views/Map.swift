@@ -13,7 +13,7 @@ protocol AnyView {
     var presenter: AnyPresenter? { get set }
 }
 
-class RootViewController: UIViewController, AnyView {
+class MapViewController: UIViewController, AnyView {
     var presenter: AnyPresenter?
     var locationManager: AnyLocationManager {
         didSet {
@@ -48,6 +48,6 @@ class RootViewController: UIViewController, AnyView {
     }()
 }
 
-extension RootViewController: CLLocationManagerDelegate {
+extension MapViewController: CLLocationManagerDelegate {
     
 }

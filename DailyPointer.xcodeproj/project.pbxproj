@@ -14,12 +14,15 @@
 		E52439262876D75400EB866D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52439252876D75400EB866D /* Assets.xcassets */; };
 		E52439292876D75400EB866D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52439272876D75400EB866D /* LaunchScreen.storyboard */; };
 		E52439322876D89900EB866D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439312876D89900EB866D /* Router.swift */; };
-		E52439342876D90100EB866D /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439332876D90100EB866D /* View.swift */; };
+		E52439342876D90100EB866D /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439332876D90100EB866D /* Map.swift */; };
 		E52439362876D90D00EB866D /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439352876D90D00EB866D /* Interactor.swift */; };
 		E52439382876D91C00EB866D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439372876D91C00EB866D /* Presenter.swift */; };
 		E524393A2876D92C00EB866D /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439392876D92C00EB866D /* Entity.swift */; };
 		E5960AAD2877151A0014DF70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5960AAC2877151A0014DF70 /* GoogleService-Info.plist */; };
 		E5960AB0287718720014DF70 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AAF287718720014DF70 /* FirebaseService.swift */; };
+		E5960AB328771A130014DF70 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AB228771A130014DF70 /* Login.swift */; };
+		E5960AB528772E9E0014DF70 /* CreateNewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AB428772E9E0014DF70 /* CreateNewAccount.swift */; };
+		E5960AB72878179D0014DF70 /* FireBaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AB62878179D0014DF70 /* FireBaseAuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,12 +37,15 @@
 		E52439282876D75400EB866D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E524392A2876D75400EB866D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E52439312876D89900EB866D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		E52439332876D90100EB866D /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		E52439332876D90100EB866D /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		E52439352876D90D00EB866D /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		E52439372876D91C00EB866D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		E52439392876D92C00EB866D /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		E5960AAC2877151A0014DF70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E5960AAF287718720014DF70 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		E5960AB228771A130014DF70 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		E5960AB428772E9E0014DF70 /* CreateNewAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccount.swift; sourceTree = "<group>"; };
+		E5960AB62878179D0014DF70 /* FireBaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseAuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +122,7 @@
 		E52439302876D88100EB866D /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
-				E52439332876D90100EB866D /* View.swift */,
+				E5960AB128771A000014DF70 /* Views */,
 				E52439352876D90D00EB866D /* Interactor.swift */,
 				E52439372876D91C00EB866D /* Presenter.swift */,
 				E52439392876D92C00EB866D /* Entity.swift */,
@@ -129,8 +135,19 @@
 			isa = PBXGroup;
 			children = (
 				E5960AAF287718720014DF70 /* FirebaseService.swift */,
+				E5960AB62878179D0014DF70 /* FireBaseAuthService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E5960AB128771A000014DF70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E52439332876D90100EB866D /* Map.swift */,
+				E5960AB228771A130014DF70 /* Login.swift */,
+				E5960AB428772E9E0014DF70 /* CreateNewAccount.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,13 +265,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5960AB72878179D0014DF70 /* FireBaseAuthService.swift in Sources */,
 				E52439362876D90D00EB866D /* Interactor.swift in Sources */,
+				E5960AB328771A130014DF70 /* Login.swift in Sources */,
 				E52439382876D91C00EB866D /* Presenter.swift in Sources */,
+				E5960AB528772E9E0014DF70 /* CreateNewAccount.swift in Sources */,
 				E52439322876D89900EB866D /* Router.swift in Sources */,
 				E524393A2876D92C00EB866D /* Entity.swift in Sources */,
 				E5960AB0287718720014DF70 /* FirebaseService.swift in Sources */,
 				E5094D0D2876EC6100C016A7 /* LocationManager.swift in Sources */,
-				E52439342876D90100EB866D /* View.swift in Sources */,
+				E52439342876D90100EB866D /* Map.swift in Sources */,
 				E524391D2876D75300EB866D /* AppDelegate.swift in Sources */,
 				E524391F2876D75300EB866D /* SceneDelegate.swift in Sources */,
 			);

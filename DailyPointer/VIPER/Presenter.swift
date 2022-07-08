@@ -13,8 +13,9 @@ protocol AnyPresenter {
     var interactor: AnyInteractor? { get set }
 }
 
-class RootControllerPresenter: AnyPresenter {
+class LoginPresenter: AnyPresenter {
     var router: AnyRouter?
     var view: AnyView?
     var interactor: AnyInteractor?
+    
 }
