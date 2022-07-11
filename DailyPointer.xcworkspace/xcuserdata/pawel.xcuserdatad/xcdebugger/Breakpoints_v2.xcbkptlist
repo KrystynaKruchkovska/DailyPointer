@@ -14,8 +14,8 @@
             filePath = "DailyPointer/VIPER/Views/Login.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "pressedCreateNewAccount(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,16 +23,160 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2B9A2464-C8B9-4B1D-BDD1-16FB864A9FA8"
+            uuid = "A645A659-37F1-4659-94F2-788B2003D1B7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "DailyPointer/VIPER/Router.swift"
+            filePath = "DailyPointer/VIPER/Views/WelcomeScreen/CreateNewAccount.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "showCreateNewAccountVC()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "textFieldDidEndEditing(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDFCB6FA-574D-4585-B47C-819623E60EA1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyPointer/VIPER/Views/WelcomeScreen/Views/CreateNewAccountVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "nextBtnClicked(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BDFCB6FA-574D-4585-B47C-819623E60EA1 - 6963f7c3c6c45eef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyPointer.CreateNewAccountVC.nextBtnClicked(__C.UIButton) -&gt; ()"
+                  moduleName = "DailyPointer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawel/Documents/Krysia/DailyPointer/DailyPointer/VIPER/Views/WelcomeScreen/Views/CreateNewAccountVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "68">
+               </Location>
+               <Location
+                  uuid = "BDFCB6FA-574D-4585-B47C-819623E60EA1 - 6963f7c3c6c45eef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyPointer.CreateNewAccountVC.nextBtnClicked(__C.UIButton) -&gt; ()"
+                  moduleName = "DailyPointer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawel/Documents/Krysia/DailyPointer/DailyPointer/VIPER/Views/WelcomeScreen/Views/CreateNewAccountVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F94A6521-3CC3-4E02-98C8-FB5FA9AAC480"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyPointer/VIPER/Views/WelcomeScreen/WelcomeVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "pressedlogInBtn(sender:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CE310906-13B8-439C-BF40-87DEE8614EF0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyPointer/VIPER/Entity.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "init(user:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CE310906-13B8-439C-BF40-87DEE8614EF0 - ab3768d3c5451777"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyPointer.FireBaseUser.__allocating_init(user: __C.FIRUser) -&gt; DailyPointer.FireBaseUser"
+                  moduleName = "DailyPointer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawel/Documents/Krysia/DailyPointer/DailyPointer/VIPER/Entity.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "CE310906-13B8-439C-BF40-87DEE8614EF0 - c4f71dbcece3557a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DailyPointer.FireBaseUser.init(user: __C.FIRUser) -&gt; DailyPointer.FireBaseUser"
+                  moduleName = "DailyPointer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pawel/Documents/Krysia/DailyPointer/DailyPointer/VIPER/Entity.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9DB526FE-F0C9-41AE-8D10-3067BAC515A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyPointer/VIPER/Entity.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "email"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06D8F519-EB7C-440D-B891-64DAEEE4DB5C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DailyPointer/VIPER/Views/WelcomeScreen/SignInInteractor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "signIn(authType:credentials:handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

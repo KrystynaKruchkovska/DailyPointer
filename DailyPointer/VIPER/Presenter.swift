@@ -7,15 +7,16 @@
 
 import Foundation
 
-protocol AnyPresenter {
+protocol AnyPresenter: AnyObject {
     var view: AnyView? { get set }
     var router: AnyRouter? { get set }
     var interactor: AnyInteractor? { get set }
 }
 
-class LoginPresenter: AnyPresenter {
+class SigninPresenter: AnyPresenter {
     var router: AnyRouter?
     var view: AnyView?
     var interactor: AnyInteractor?
+    
     
 }

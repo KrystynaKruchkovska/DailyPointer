@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct Post: Codable {
     var title:String
@@ -18,35 +19,36 @@ struct Location: Codable {
     var long:Double
 }
 
-struct User: Codable {
+struct UserBaseData: Codable {
     var nickname: String
     var email:String
     var password: String
 }
 
 protocol AnyFirebaseUser {
-    var email: String { get }
-    var nickname: String { get }
+    var email: String? { get }
+    var displayName: String? { get }
     var uid: String { get }
     var providerID: String { get }
-    var isEmailVerified: Bool { get }
+//    var isEmailVerified: Bool { get }
     
-    func sendEmailVerification(completion: @escaping (Error?) -> ())
+//    func sendEmailVerification(completion: @escaping (Error?) -> ())
 }
 
+
 class FireBaseUser: AnyFirebaseUser {
-    let user: AnyFirebaseUser
+    let user: User
     
-    init(user: AnyFirebaseUser) {
+    init(user: User) {
         self.user = user
     }
 
-    var email: String {
-        return user.email
+    var email: String? {
+        return user.email ?? ""
     }
     
-    var nickname: String {
-        return ""
+    var displayName: String? {
+        return user.displayName ?? ""
     }
     
     var uid: String {
@@ -57,9 +59,9 @@ class FireBaseUser: AnyFirebaseUser {
         return user.providerID
     }
     
-    var isEmailVerified: Bool {
-        return user.isEmailVerified
-    }
+//    var isEmailVerified: Bool {
+//        return user.isEmailVerified
+//    }
     
     func sendEmailVerification(completion: @escaping (Error?) -> ()) {
         

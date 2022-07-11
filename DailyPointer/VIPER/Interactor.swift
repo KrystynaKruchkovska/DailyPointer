@@ -13,7 +13,7 @@ protocol AnyInteractor {
 }
 
 class MapInteractor: AnyInteractor {
-    var presenter: AnyPresenter?
+    weak var presenter: AnyPresenter?
     
     func getAllPosts() -> [Post] {
         return [Post(title: "SomeTitle", description: "some description", location: Location(lat: 34, long: -135))]

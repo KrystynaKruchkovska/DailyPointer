@@ -14,15 +14,24 @@
 		E52439262876D75400EB866D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52439252876D75400EB866D /* Assets.xcassets */; };
 		E52439292876D75400EB866D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52439272876D75400EB866D /* LaunchScreen.storyboard */; };
 		E52439322876D89900EB866D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439312876D89900EB866D /* Router.swift */; };
-		E52439342876D90100EB866D /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439332876D90100EB866D /* Map.swift */; };
 		E52439362876D90D00EB866D /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439352876D90D00EB866D /* Interactor.swift */; };
 		E52439382876D91C00EB866D /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439372876D91C00EB866D /* Presenter.swift */; };
 		E524393A2876D92C00EB866D /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439392876D92C00EB866D /* Entity.swift */; };
 		E5960AAD2877151A0014DF70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5960AAC2877151A0014DF70 /* GoogleService-Info.plist */; };
 		E5960AB0287718720014DF70 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AAF287718720014DF70 /* FirebaseService.swift */; };
-		E5960AB328771A130014DF70 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AB228771A130014DF70 /* Login.swift */; };
-		E5960AB528772E9E0014DF70 /* CreateNewAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AB428772E9E0014DF70 /* CreateNewAccount.swift */; };
+		E5960AB328771A130014DF70 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AB228771A130014DF70 /* WelcomeVC.swift */; };
 		E5960AB72878179D0014DF70 /* FireBaseAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AB62878179D0014DF70 /* FireBaseAuthService.swift */; };
+		E59B9222287C0F7A005CEE03 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9221287C0F7A005CEE03 /* UIView+Extensions.swift */; };
+		E59B9224287C15BC005CEE03 /* UIbutton+Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9223287C15BC005CEE03 /* UIbutton+Extension .swift */; };
+		E59B9226287C18EF005CEE03 /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9225287C18EF005CEE03 /* UIStackView+Extension.swift */; };
+		E59B9228287C289B005CEE03 /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9227287C289B005CEE03 /* UILabel + Extension.swift */; };
+		E59B922B287C2CB4005CEE03 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B922A287C2CB4005CEE03 /* WelcomeView.swift */; };
+		E59B9230287C304C005CEE03 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B922F287C304C005CEE03 /* UITextField+Extensions.swift */; };
+		E59B9239287C6570005CEE03 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9238287C6570005CEE03 /* SignInInteractor.swift */; };
+		E59B923F287C7C6A005CEE03 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B923E287C7C69005CEE03 /* Map.swift */; };
+		E59B9242287C7C99005CEE03 /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9240287C7C99005CEE03 /* CreateNewAccountVC.swift */; };
+		E59B9243287C7C99005CEE03 /* CreateNewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9241287C7C99005CEE03 /* CreateNewAccountView.swift */; };
+		E59B9246287C7D54005CEE03 /* CreateNewAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9245287C7D54005CEE03 /* CreateNewAccountInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,15 +46,24 @@
 		E52439282876D75400EB866D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E524392A2876D75400EB866D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E52439312876D89900EB866D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		E52439332876D90100EB866D /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
 		E52439352876D90D00EB866D /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		E52439372876D91C00EB866D /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		E52439392876D92C00EB866D /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		E5960AAC2877151A0014DF70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E5960AAF287718720014DF70 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
-		E5960AB228771A130014DF70 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
-		E5960AB428772E9E0014DF70 /* CreateNewAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccount.swift; sourceTree = "<group>"; };
+		E5960AB228771A130014DF70 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		E5960AB62878179D0014DF70 /* FireBaseAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseAuthService.swift; sourceTree = "<group>"; };
+		E59B9221287C0F7A005CEE03 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		E59B9223287C15BC005CEE03 /* UIbutton+Extension .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIbutton+Extension .swift"; sourceTree = "<group>"; };
+		E59B9225287C18EF005CEE03 /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		E59B9227287C289B005CEE03 /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
+		E59B922A287C2CB4005CEE03 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		E59B922F287C304C005CEE03 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		E59B9238287C6570005CEE03 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
+		E59B923E287C7C69005CEE03 /* Map.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Map.swift; path = DailyPointer/VIPER/Views/Map.swift; sourceTree = SOURCE_ROOT; };
+		E59B9240287C7C99005CEE03 /* CreateNewAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNewAccountVC.swift; path = DailyPointer/VIPER/Views/Welcome/Views/CreateNewAccountVC.swift; sourceTree = SOURCE_ROOT; };
+		E59B9241287C7C99005CEE03 /* CreateNewAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNewAccountView.swift; path = DailyPointer/VIPER/Views/Welcome/Views/CreateNewAccountView.swift; sourceTree = SOURCE_ROOT; };
+		E59B9245287C7D54005CEE03 /* CreateNewAccountInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewAccountInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +124,7 @@
 		E524391B2876D75300EB866D /* DailyPointer */ = {
 			isa = PBXGroup;
 			children = (
+				E59B9220287C0F5F005CEE03 /* Extensions */,
 				E5960AAE287718620014DF70 /* Services */,
 				E5094D0B2876EC4A00C016A7 /* Manager */,
 				E52439302876D88100EB866D /* VIPER */,
@@ -143,11 +162,60 @@
 		E5960AB128771A000014DF70 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E52439332876D90100EB866D /* Map.swift */,
-				E5960AB228771A130014DF70 /* Login.swift */,
-				E5960AB428772E9E0014DF70 /* CreateNewAccount.swift */,
+				E59B9229287C2C9D005CEE03 /* Welcome */,
+				E59B922C287C2CE6005CEE03 /* CreateNewAccountScreen */,
+				E59B923E287C7C69005CEE03 /* Map.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E59B9220287C0F5F005CEE03 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E59B9221287C0F7A005CEE03 /* UIView+Extensions.swift */,
+				E59B9223287C15BC005CEE03 /* UIbutton+Extension .swift */,
+				E59B9225287C18EF005CEE03 /* UIStackView+Extension.swift */,
+				E59B9227287C289B005CEE03 /* UILabel + Extension.swift */,
+				E59B922F287C304C005CEE03 /* UITextField+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E59B9229287C2C9D005CEE03 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				E5960AB228771A130014DF70 /* WelcomeVC.swift */,
+				E59B922A287C2CB4005CEE03 /* WelcomeView.swift */,
+				E59B9238287C6570005CEE03 /* SignInInteractor.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		E59B922C287C2CE6005CEE03 /* CreateNewAccountScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E59B9244287C7CAD005CEE03 /* Interactor */,
+				E59B9231287C49CF005CEE03 /* Views */,
+			);
+			name = CreateNewAccountScreen;
+			path = WelcomeScreen;
+			sourceTree = "<group>";
+		};
+		E59B9231287C49CF005CEE03 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E59B9240287C7C99005CEE03 /* CreateNewAccountVC.swift */,
+				E59B9241287C7C99005CEE03 /* CreateNewAccountView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E59B9244287C7CAD005CEE03 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E59B9245287C7D54005CEE03 /* CreateNewAccountInteractor.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,17 +333,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E59B9222287C0F7A005CEE03 /* UIView+Extensions.swift in Sources */,
 				E5960AB72878179D0014DF70 /* FireBaseAuthService.swift in Sources */,
 				E52439362876D90D00EB866D /* Interactor.swift in Sources */,
-				E5960AB328771A130014DF70 /* Login.swift in Sources */,
+				E5960AB328771A130014DF70 /* WelcomeVC.swift in Sources */,
 				E52439382876D91C00EB866D /* Presenter.swift in Sources */,
-				E5960AB528772E9E0014DF70 /* CreateNewAccount.swift in Sources */,
+				E59B922B287C2CB4005CEE03 /* WelcomeView.swift in Sources */,
 				E52439322876D89900EB866D /* Router.swift in Sources */,
+				E59B9242287C7C99005CEE03 /* CreateNewAccountVC.swift in Sources */,
+				E59B9230287C304C005CEE03 /* UITextField+Extensions.swift in Sources */,
 				E524393A2876D92C00EB866D /* Entity.swift in Sources */,
+				E59B9226287C18EF005CEE03 /* UIStackView+Extension.swift in Sources */,
+				E59B9224287C15BC005CEE03 /* UIbutton+Extension .swift in Sources */,
+				E59B9228287C289B005CEE03 /* UILabel + Extension.swift in Sources */,
+				E59B9243287C7C99005CEE03 /* CreateNewAccountView.swift in Sources */,
+				E59B9246287C7D54005CEE03 /* CreateNewAccountInteractor.swift in Sources */,
 				E5960AB0287718720014DF70 /* FirebaseService.swift in Sources */,
 				E5094D0D2876EC6100C016A7 /* LocationManager.swift in Sources */,
-				E52439342876D90100EB866D /* Map.swift in Sources */,
+				E59B923F287C7C6A005CEE03 /* Map.swift in Sources */,
 				E524391D2876D75300EB866D /* AppDelegate.swift in Sources */,
+				E59B9239287C6570005CEE03 /* SignInInteractor.swift in Sources */,
 				E524391F2876D75300EB866D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,10 +495,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V8ZG3WLBMM;
 				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = DailyPointer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -447,10 +525,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V8ZG3WLBMM;
 				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_FLATTEN_NIBS = NO;
 				INFOPLIST_FILE = DailyPointer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
