@@ -25,18 +25,18 @@ struct UserBaseData: Codable {
     var password: String
 }
 
-protocol AnyFirebaseUser {
+protocol FIRUser {
     var email: String? { get }
     var displayName: String? { get }
     var uid: String { get }
     var providerID: String { get }
-//    var isEmailVerified: Bool { get }
+    var isEmailVerified: Bool { get }
     
-//    func sendEmailVerification(completion: @escaping (Error?) -> ())
+    func sendEmailVerification(completion: @escaping (Error?) -> ())
 }
 
 
-class FireBaseUser: AnyFirebaseUser {
+class FireBaseUser: FIRUser {
     let user: User
     
     init(user: User) {
@@ -59,12 +59,14 @@ class FireBaseUser: AnyFirebaseUser {
         return user.providerID
     }
     
-//    var isEmailVerified: Bool {
-//        return user.isEmailVerified
-//    }
+    var isEmailVerified: Bool {
+        return user.isEmailVerified
+    }
     
     func sendEmailVerification(completion: @escaping (Error?) -> ()) {
-        
+        user.sendEmailVerification { error in
+            completion(error)
+        }
     }
     
 }

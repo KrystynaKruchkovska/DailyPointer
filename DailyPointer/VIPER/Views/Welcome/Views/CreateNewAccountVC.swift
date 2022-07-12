@@ -8,15 +8,26 @@
 import Foundation
 import UIKit
 
-class CreateNewAccountVC: UIViewController, AnyView {
-    var presenter: AnyPresenter?
+protocol CreateNewAccountViewProtocol {
+    var presenter: CreateNewAccountPresenterProtocol? { get set }
+}
+
+class CreateNewAccountVC: UIViewController, CreateNewAccountViewProtocol {
+    var presenter: CreateNewAccountPresenterProtocol?
     
-    private var interactor: CreateNewAccountInteractor? {
-        return presenter?.interactor as? CreateNewAccountInteractor
-    }
+//    private var interactor: CreateNewAccountInteractorProtocol?
     private var newAccountView:NewAccountView {
         return view as! NewAccountView
     }
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     override func loadView() {
         self.view = NewAccountView()
@@ -35,20 +46,7 @@ class CreateNewAccountVC: UIViewController, AnyView {
     }
     
     @objc func nextBtnClicked(_ button: UIButton) {
-        if let interactor = interactor {
-            interactor.createNewUser(UserBaseData(nickname: newAccountView.nickNameTextField.text ?? "", email: newAccountView.emailTextField.text ?? "", password: newAccountView.passwordTextField.text ?? ""), handler: { [weak self] result in
-                
-                DispatchQueue.main.async {
-                    switch result {
-                    case .success:
-                        print("success creating USER")
-                    case .failure(let error):
-                        self?.presenter?.router?.showAlertVC(title: "Opps error creating user", messsage: error.localizedDescription)
-                        print("[ERROR]:\(error)")
-                    }
-                }
-            })
-        }
+        presenter?.createNewUser(UserBaseData(nickname: newAccountView.nickNameTextField.text ?? "", email: newAccountView.emailTextField.text ?? "", password: newAccountView.passwordTextField.text ?? ""))
     }
 }
 
@@ -56,3 +54,17 @@ extension CreateNewAccountVC: UITextFieldDelegate {
     
     
 }
+//
+//
+//                                 , handler: { [weak self] result in
+//
+//                                         DispatchQueue.main.async {
+//                                             switch result {
+//                                             case .success:
+//                                                 print("success creating USER")
+//                                             case .failure(let error):
+//                                                 self?.presenter?.router?.showAlertVC(title: "Opps error creating user", messsage: error.localizedDescription)
+//                                                 print("[ERROR]:\(error)")
+//                                             }
+//                                         }
+//                                     })

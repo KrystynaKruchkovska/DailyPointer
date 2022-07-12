@@ -8,29 +8,29 @@
 import Foundation
 import UIKit
 
-typealias EntryPoint = AnyView & UIViewController
+typealias EntryPoint = SignInViewProtocol & UIViewController
 
 protocol AnyRouter {
     var entryPoint: EntryPoint? { get set }
     static func start() -> AnyRouter
     func showCreateNewAccountVC()
     func showAlertVC(title: String, messsage: String)
+    func showMapViewController(user: FIRUser)
 }
 
 
-class Router: AnyRouter {
+class LogInRouter: AnyRouter {
     
     var entryPoint: EntryPoint?
-    var currentView: AnyView?
-    
+   
     static func start() -> AnyRouter {
-        let router = Router()
+        let router = LogInRouter()
         
         //Asign VIP
         //        var view: AnyView = MapViewController(locationManager: LacationManager())
-        var view: AnyView = WelcomeViewController()
-        let presenter: AnyPresenter = SigninPresenter()
-        var interactor: AnyInteractor = SignInInteractor()
+        var view: SignInViewProtocol = WelcomeViewController()
+        let presenter: SignInPresenterProtocol = SigninPresenter()
+        var interactor: SignInInteractorProtocol = SignInInteractor()
         
         view.presenter = presenter
         
@@ -41,17 +41,16 @@ class Router: AnyRouter {
         presenter.view = view
         
         router.entryPoint = view as? EntryPoint
-        router.currentView = view
         
         return router
     }
     
     func showCreateNewAccountVC() {
-        var createAccountView: AnyView = CreateNewAccountVC()
-        createAccountView.presenter = entryPoint?.presenter
+        var createAccountView:CreateNewAccountViewProtocol = CreateNewAccountVC()
+        createAccountView.presenter = CreateNewAccountPresenter()
         
-        if let view = currentView as? UIViewController {
-            view.navigationController?.pushViewController(createAccountView as! UIViewController, animated: true)
+        if let vc = entryPoint {
+            vc.navigationController?.pushViewController(createAccountView as! UIViewController, animated: true)
         }
     }
     
@@ -61,8 +60,8 @@ class Router: AnyRouter {
         alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: doSomething))
         alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
         
-        if let view = currentView as? UIViewController {
-            view.present(alert, animated: true)
+        if let vc = entryPoint {
+            vc.present(alert, animated: true)
         }
         
         
@@ -72,5 +71,13 @@ class Router: AnyRouter {
     }
     
     
-    
+    func showMapViewController(user: FIRUser) {
+        var createMapView: MapViewProtocol = MapViewController(locationManager: LacationManager(), user: user)
+        createMapView.presenter = MapPresenter()
+        
+        if let vc = entryPoint {
+            vc.navigationController?.pushViewController(createMapView as! UIViewController, animated: true)
+        }
+    }
+
 }

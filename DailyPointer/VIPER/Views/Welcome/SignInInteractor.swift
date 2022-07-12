@@ -7,8 +7,13 @@
 
 import Foundation
 
-class SignInInteractor: AnyInteractor {
-    weak var presenter: AnyPresenter?
+protocol SignInInteractorProtocol {
+    var presenter: SignInPresenterProtocol? { get set }
+    func signIn(authType: AuthTypes, credentials: AnyCredetials, handler: @escaping(Result<FireBaseUser, Error>)->())
+}
+
+class SignInInteractor: SignInInteractorProtocol {
+    weak var presenter: SignInPresenterProtocol?
     var authService: AnyFirebaseAuthService
     
     init() {
@@ -24,6 +29,10 @@ class SignInInteractor: AnyInteractor {
                 handler(.failure(error))
             }
         }
+    }
+    
+    func checkIsUserVerified(user: FIRUser) -> Bool {
+        return user.isEmailVerified
     }
 }
 

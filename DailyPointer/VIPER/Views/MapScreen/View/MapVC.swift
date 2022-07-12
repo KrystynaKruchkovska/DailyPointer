@@ -9,20 +9,22 @@ import Foundation
 import UIKit
 import MapKit
 
-protocol AnyView {
-    var presenter: AnyPresenter? { get set }
+protocol MapViewProtocol {
+    var presenter: MapPresenterProtocol? { get set }
 }
 
-class MapViewController: UIViewController, AnyView {
-    var presenter: AnyPresenter?
+class MapViewController: UIViewController, MapViewProtocol {
+    var user: FIRUser
+    var presenter: MapPresenterProtocol?
     var locationManager: AnyLocationManager {
         didSet {
             locationManager.delegate = self
         }
     }
     
-    init(locationManager: AnyLocationManager) {
+    init(locationManager: AnyLocationManager, user: FIRUser) {
         self.locationManager = locationManager
+        self.user = user
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,22 +32,11 @@ class MapViewController: UIViewController, AnyView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func viewDidLoad() {
-        view.backgroundColor = .orange
+    override func loadView() {
+        let mapView = MapView()
         self.view = mapView
     }
     
-    override func viewDidLayoutSubviews() {
-        self.mapView.frame = view.bounds
-    }
-    
-    
-    var mapView: MKMapView = {
-        var map = MKMapView()
-        map.showsUserLocation = true
-        
-        return map
-    }()
 }
 
 extension MapViewController: CLLocationManagerDelegate {

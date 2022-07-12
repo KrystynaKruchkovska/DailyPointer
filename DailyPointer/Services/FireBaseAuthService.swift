@@ -25,7 +25,8 @@ protocol AnyCredetials {
 }
 protocol AnyFirebaseAuthService {
     func singIn(with authType: AuthTypes, credentials: AnyCredetials, handler: @escaping (Result<FireBaseUser,Error>)->())
-    func createNewAccount(user: UserBaseData, handler: @escaping (Result<AnyFirebaseUser, Error>) -> ())
+    func createNewAccount(user: UserBaseData, handler: @escaping (Result<FIRUser, Error>) -> ())
+    func sendVerificationEmail(user:FIRUser, handler:@escaping (_ error:Error?)->())
 }
 
 struct FacebookCredentials: AnyCredetials {
@@ -72,25 +73,24 @@ class FirebaseAuthService: AnyFirebaseAuthService {
         
     }
     
-    func createNewAccount(user: UserBaseData, handler: @escaping (Result<AnyFirebaseUser, Error>) -> ()){
-        Auth.auth().createUser(withEmail: user.email, password: user.password){ (authResult, error) in
+    func createNewAccount(user: UserBaseData, handler: @escaping (Result<FIRUser, Error>) -> ()) {
+        Auth.auth().createUser(withEmail: user.email, password: user.password) { (authResult, error) in
             if let error = error {
                 print("create user error: \(error)")
                 handler(Result.failure(error))
-                
                 return
             }
-            
             guard let user = authResult?.user  else {
                 handler(Result.failure(Errors.failedGetUser))
                 return
             }
-            
-            
             handler(Result.success(FireBaseUser(user: user)))
-            
-            
         }
-        
     }
+    
+    func sendVerificationEmail(user:FIRUser, handler:@escaping (_ error:Error?)->()) {
+        user.sendEmailVerification { error in
+            handler(error)
+        }
+     }
 }
