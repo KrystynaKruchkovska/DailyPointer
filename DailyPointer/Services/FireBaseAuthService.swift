@@ -23,10 +23,12 @@ enum AuthTypes {
 protocol AnyCredetials {
     
 }
-protocol AnyFirebaseAuthService {
+protocol AuthServiceProtocol {
     func singIn(with authType: AuthTypes, credentials: AnyCredetials, handler: @escaping (Result<FireBaseUser,Error>)->())
     func createNewAccount(user: UserBaseData, handler: @escaping (Result<FIRUser, Error>) -> ())
     func sendVerificationEmail(user:FIRUser, handler:@escaping (_ error:Error?)->())
+    func signOut(handler: @escaping (Error?)->())
+    func resetPassword(email: String, handler: @escaping (_ error:Error?) -> ())
 }
 
 struct FacebookCredentials: AnyCredetials {
@@ -41,7 +43,12 @@ struct GoogleCredentials: AnyCredetials {
 }
 
 
-class FirebaseAuthService: AnyFirebaseAuthService {
+class FirebaseAuthService: AuthServiceProtocol {
+    
+    static let shared = FirebaseAuthService()
+    
+    private init() {}
+    
     func singIn(with authType: AuthTypes, credentials: AnyCredetials, handler: @escaping (Result<FireBaseUser,Error>)->()) {
         
         switch authType {
@@ -73,6 +80,15 @@ class FirebaseAuthService: AnyFirebaseAuthService {
         
     }
     
+    func signOut(handler: @escaping (Error?)->()) {
+        do {
+            try Auth.auth().signOut()
+            handler(nil)
+        } catch let signOutError {
+            handler(signOutError)
+        }
+    }
+    
     func createNewAccount(user: UserBaseData, handler: @escaping (Result<FIRUser, Error>) -> ()) {
         Auth.auth().createUser(withEmail: user.email, password: user.password) { (authResult, error) in
             if let error = error {
@@ -93,4 +109,10 @@ class FirebaseAuthService: AnyFirebaseAuthService {
             handler(error)
         }
      }
+    
+    func resetPassword(email: String, handler: @escaping (_ error:Error?) -> ()) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            handler(error)
+        }
+    }
 }

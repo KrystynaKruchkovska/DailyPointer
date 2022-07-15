@@ -21,13 +21,13 @@ class WelcomeView: UIView {
         super.layoutSubviews()
         self.addSubview(loginVStackView)
 
-        [mainLabel, emailTextField, passwordTextField, logInBtn, createNewAccountBtn].forEach(loginVStackView.addArrangedSubview)
+        [mainLabel, emailTextField, passwordTextField, logInBtn, createNewAccountBtn, forgotPassword].forEach(loginVStackView.addArrangedSubview)
         loginVStackView.anchor(canterXAnchor: self.centerXAnchor, canterYAnchor:self.centerYAnchor, left: self.leftAnchor, right: self.rightAnchor, topConstant: 0, bottomConstant: 0, leftConstant: 20, rightConstant: 20)
         self.backgroundColor = .yellow
 
     }
     
-    var mainLabel: UILabel = {
+    fileprivate var mainLabel: UILabel = {
         var label = UILabel(text: "Daily Pointer", textAlignment: .center)
         return label
     }()
@@ -39,11 +39,23 @@ class WelcomeView: UIView {
     
     var passwordTextField: UITextField = {
         var textField = UITextField(placeholder: "password", textColor: .blue)
+        textField.isSecureTextEntry = true
+        textField.enablePasswordToggle()
         return textField
     }()
     
     var createNewAccountBtn: UIButton = {
         var button = UIButton(title: "Create New Account", backgroundColor: nil, titleColor: .systemBlue)
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = UIColor.systemBlue.cgColor
+        return button
+    }()
+    
+    var forgotPassword: UIButton = {
+        var button = UIButton(title: "Forgot password", backgroundColor: nil, titleColor: .systemBlue)
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = UIColor.systemBlue.cgColor
+
         return button
     }()
     
@@ -52,7 +64,7 @@ class WelcomeView: UIView {
         return button
     }()
     
-    var loginVStackView: UIStackView = {
+    fileprivate var loginVStackView: UIStackView = {
         var vStackView = UIStackView(arrangedSubviews: [], axis: .vertical, spacing: 16, alignment: .fill, distribution: .equalCentering)
         return vStackView
     }()

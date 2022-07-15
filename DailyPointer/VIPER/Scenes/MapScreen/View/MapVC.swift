@@ -22,19 +22,37 @@ class MapViewController: UIViewController, MapViewProtocol {
         }
     }
     
+    private var mapView: MapView {
+        return view as! MapView
+    }
+    
     init(locationManager: AnyLocationManager, user: FIRUser) {
         self.locationManager = locationManager
         self.user = user
         super.init(nibName: nil, bundle: nil)
     }
     
+    override func loadView() {
+        let mapView = MapView()
+        self.view = mapView
+    }
+    
+    override func viewDidLayoutSubviews() {
+        self.navigationItem.hidesBackButton = true
+        mapView.signOutButton.addTarget(self, action: #selector(signOut(_:)), for: .touchDown)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
-        let mapView = MapView()
-        self.view = mapView
+    @objc func signOut(_ button: UIButton) {
+        presenter?.signOut()
     }
     
 }

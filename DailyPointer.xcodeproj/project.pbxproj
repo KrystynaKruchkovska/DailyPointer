@@ -14,12 +14,24 @@
 		E52439262876D75400EB866D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52439252876D75400EB866D /* Assets.xcassets */; };
 		E52439292876D75400EB866D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E52439272876D75400EB866D /* LaunchScreen.storyboard */; };
 		E52439322876D89900EB866D /* LogInRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439312876D89900EB866D /* LogInRouter.swift */; };
-		E52439362876D90D00EB866D /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439352876D90D00EB866D /* Interactor.swift */; };
+		E52439362876D90D00EB866D /* MapInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439352876D90D00EB866D /* MapInteractor.swift */; };
 		E52439382876D91C00EB866D /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439372876D91C00EB866D /* SignInPresenter.swift */; };
 		E524393A2876D92C00EB866D /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52439392876D92C00EB866D /* Entity.swift */; };
 		E5580FCE287D770E0014522A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FCD287D770E0014522A /* MapView.swift */; };
 		E5580FD0287DA5440014522A /* CreateNewAccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FCF287DA5440014522A /* CreateNewAccountPresenter.swift */; };
 		E5580FD3287DA96F0014522A /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FD2287DA96F0014522A /* MapPresenter.swift */; };
+		E5580FD5287F10050014522A /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FD4287F10050014522A /* MapRouter.swift */; };
+		E5580FD7288015C20014522A /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FD6288015C20014522A /* UIViewController+Extension.swift */; };
+		E5580FE0288032020014522A /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FDF288032020014522A /* MapVC.swift */; };
+		E5580FE4288032740014522A /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FE2288032740014522A /* CreateNewAccountVC.swift */; };
+		E5580FE5288032740014522A /* CreateNewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FE3288032740014522A /* CreateNewAccountView.swift */; };
+		E5580FE7288033DE0014522A /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FE6288033DE0014522A /* Popup.swift */; };
+		E5580FE9288055F50014522A /* PopUpVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FE8288055F50014522A /* PopUpVc.swift */; };
+		E5580FEC28815D0A0014522A /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FEB28815D090014522A /* ForgotPasswordVC.swift */; };
+		E5580FEE28815D250014522A /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FED28815D250014522A /* ForgotPasswordView.swift */; };
+		E5580FF0288161E30014522A /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FEF288161E30014522A /* ForgotPasswordPresenter.swift */; };
+		E5580FF2288162870014522A /* ForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FF1288162870014522A /* ForgotPasswordInteractor.swift */; };
+		E5580FF4288162CF0014522A /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FF3288162CF0014522A /* ForgotPasswordRouter.swift */; };
 		E5960AAD2877151A0014DF70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5960AAC2877151A0014DF70 /* GoogleService-Info.plist */; };
 		E5960AB0287718720014DF70 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AAF287718720014DF70 /* FirebaseService.swift */; };
 		E5960AB328771A130014DF70 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AB228771A130014DF70 /* WelcomeVC.swift */; };
@@ -31,9 +43,6 @@
 		E59B922B287C2CB4005CEE03 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B922A287C2CB4005CEE03 /* WelcomeView.swift */; };
 		E59B9230287C304C005CEE03 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B922F287C304C005CEE03 /* UITextField+Extensions.swift */; };
 		E59B9239287C6570005CEE03 /* SignInInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9238287C6570005CEE03 /* SignInInteractor.swift */; };
-		E59B923F287C7C6A005CEE03 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B923E287C7C69005CEE03 /* MapVC.swift */; };
-		E59B9242287C7C99005CEE03 /* CreateNewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9240287C7C99005CEE03 /* CreateNewAccountVC.swift */; };
-		E59B9243287C7C99005CEE03 /* CreateNewAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9241287C7C99005CEE03 /* CreateNewAccountView.swift */; };
 		E59B9246287C7D54005CEE03 /* CreateNewAccountInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59B9245287C7D54005CEE03 /* CreateNewAccountInteractor.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,12 +58,24 @@
 		E52439282876D75400EB866D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E524392A2876D75400EB866D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E52439312876D89900EB866D /* LogInRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInRouter.swift; sourceTree = "<group>"; };
-		E52439352876D90D00EB866D /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		E52439352876D90D00EB866D /* MapInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractor.swift; sourceTree = "<group>"; };
 		E52439372876D91C00EB866D /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
 		E52439392876D92C00EB866D /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		E5580FCD287D770E0014522A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		E5580FCF287DA5440014522A /* CreateNewAccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountPresenter.swift; sourceTree = "<group>"; };
 		E5580FD2287DA96F0014522A /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		E5580FD4287F10050014522A /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
+		E5580FD6288015C20014522A /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		E5580FDF288032020014522A /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		E5580FE2288032740014522A /* CreateNewAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNewAccountVC.swift; path = DailyPointer/VIPER/Scenes/Welcome/Views/CreateNewAccountVC.swift; sourceTree = SOURCE_ROOT; };
+		E5580FE3288032740014522A /* CreateNewAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNewAccountView.swift; path = DailyPointer/VIPER/Scenes/Welcome/Views/CreateNewAccountView.swift; sourceTree = SOURCE_ROOT; };
+		E5580FE6288033DE0014522A /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		E5580FE8288055F50014522A /* PopUpVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpVc.swift; sourceTree = "<group>"; };
+		E5580FEB28815D090014522A /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		E5580FED28815D250014522A /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		E5580FEF288161E30014522A /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
+		E5580FF1288162870014522A /* ForgotPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordInteractor.swift; sourceTree = "<group>"; };
+		E5580FF3288162CF0014522A /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
 		E5960AAC2877151A0014DF70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E5960AAF287718720014DF70 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		E5960AB228771A130014DF70 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -66,9 +87,6 @@
 		E59B922A287C2CB4005CEE03 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		E59B922F287C304C005CEE03 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
 		E59B9238287C6570005CEE03 /* SignInInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInInteractor.swift; sourceTree = "<group>"; };
-		E59B923E287C7C69005CEE03 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = DailyPointer/VIPER/Views/MapScreen/View/MapVC.swift; sourceTree = SOURCE_ROOT; };
-		E59B9240287C7C99005CEE03 /* CreateNewAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNewAccountVC.swift; path = DailyPointer/VIPER/Views/Welcome/Views/CreateNewAccountVC.swift; sourceTree = SOURCE_ROOT; };
-		E59B9241287C7C99005CEE03 /* CreateNewAccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateNewAccountView.swift; path = DailyPointer/VIPER/Views/Welcome/Views/CreateNewAccountView.swift; sourceTree = SOURCE_ROOT; };
 		E59B9245287C7D54005CEE03 /* CreateNewAccountInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateNewAccountInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,10 +165,9 @@
 		E52439302876D88100EB866D /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
-				E5960AB128771A000014DF70 /* Views */,
-				E52439352876D90D00EB866D /* Interactor.swift */,
+				E5580FD82880305C0014522A /* PopUp */,
+				E5960AB128771A000014DF70 /* Scenes */,
 				E52439392876D92C00EB866D /* Entity.swift */,
-				E52439312876D89900EB866D /* LogInRouter.swift */,
 			);
 			path = VIPER;
 			sourceTree = "<group>";
@@ -160,6 +177,8 @@
 			children = (
 				E5580FD1287DA9590014522A /* View */,
 				E5580FD2287DA96F0014522A /* MapPresenter.swift */,
+				E52439352876D90D00EB866D /* MapInteractor.swift */,
+				E5580FD4287F10050014522A /* MapRouter.swift */,
 			);
 			path = MapScreen;
 			sourceTree = "<group>";
@@ -167,10 +186,40 @@
 		E5580FD1287DA9590014522A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E59B923E287C7C69005CEE03 /* MapVC.swift */,
+				E5580FDF288032020014522A /* MapVC.swift */,
 				E5580FCD287D770E0014522A /* MapView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		E5580FD82880305C0014522A /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				E5580FE8288055F50014522A /* PopUpVc.swift */,
+				E5580FE6288033DE0014522A /* Popup.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		E5580FE1288032620014522A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E5580FE2288032740014522A /* CreateNewAccountVC.swift */,
+				E5580FE3288032740014522A /* CreateNewAccountView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E5580FEA28815CED0014522A /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				E5580FEB28815D090014522A /* ForgotPasswordVC.swift */,
+				E5580FED28815D250014522A /* ForgotPasswordView.swift */,
+				E5580FEF288161E30014522A /* ForgotPasswordPresenter.swift */,
+				E5580FF1288162870014522A /* ForgotPasswordInteractor.swift */,
+				E5580FF3288162CF0014522A /* ForgotPasswordRouter.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		E5960AAE287718620014DF70 /* Services */ = {
@@ -182,14 +231,15 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		E5960AB128771A000014DF70 /* Views */ = {
+		E5960AB128771A000014DF70 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E5580FEA28815CED0014522A /* ForgotPassword */,
 				E59B9229287C2C9D005CEE03 /* Welcome */,
 				E59B922C287C2CE6005CEE03 /* CreateNewAccountScreen */,
 				E5580FCA287D768F0014522A /* MapScreen */,
 			);
-			path = Views;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		E59B9220287C0F5F005CEE03 /* Extensions */ = {
@@ -200,6 +250,7 @@
 				E59B9225287C18EF005CEE03 /* UIStackView+Extension.swift */,
 				E59B9227287C289B005CEE03 /* UILabel + Extension.swift */,
 				E59B922F287C304C005CEE03 /* UITextField+Extensions.swift */,
+				E5580FD6288015C20014522A /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -211,6 +262,7 @@
 				E59B922A287C2CB4005CEE03 /* WelcomeView.swift */,
 				E59B9238287C6570005CEE03 /* SignInInteractor.swift */,
 				E52439372876D91C00EB866D /* SignInPresenter.swift */,
+				E52439312876D89900EB866D /* LogInRouter.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -218,21 +270,12 @@
 		E59B922C287C2CE6005CEE03 /* CreateNewAccountScreen */ = {
 			isa = PBXGroup;
 			children = (
+				E5580FE1288032620014522A /* Views */,
 				E5580FCF287DA5440014522A /* CreateNewAccountPresenter.swift */,
 				E59B9244287C7CAD005CEE03 /* Interactor */,
-				E59B9231287C49CF005CEE03 /* Views */,
 			);
 			name = CreateNewAccountScreen;
 			path = WelcomeScreen;
-			sourceTree = "<group>";
-		};
-		E59B9231287C49CF005CEE03 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				E59B9240287C7C99005CEE03 /* CreateNewAccountVC.swift */,
-				E59B9241287C7C99005CEE03 /* CreateNewAccountView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		E59B9244287C7CAD005CEE03 /* Interactor */ = {
@@ -360,27 +403,36 @@
 			files = (
 				E59B9222287C0F7A005CEE03 /* UIView+Extensions.swift in Sources */,
 				E5960AB72878179D0014DF70 /* FireBaseAuthService.swift in Sources */,
-				E52439362876D90D00EB866D /* Interactor.swift in Sources */,
+				E5580FEC28815D0A0014522A /* ForgotPasswordVC.swift in Sources */,
+				E5580FD5287F10050014522A /* MapRouter.swift in Sources */,
+				E52439362876D90D00EB866D /* MapInteractor.swift in Sources */,
 				E5580FCE287D770E0014522A /* MapView.swift in Sources */,
 				E5960AB328771A130014DF70 /* WelcomeVC.swift in Sources */,
 				E52439382876D91C00EB866D /* SignInPresenter.swift in Sources */,
+				E5580FF0288161E30014522A /* ForgotPasswordPresenter.swift in Sources */,
+				E5580FE4288032740014522A /* CreateNewAccountVC.swift in Sources */,
 				E59B922B287C2CB4005CEE03 /* WelcomeView.swift in Sources */,
 				E52439322876D89900EB866D /* LogInRouter.swift in Sources */,
-				E59B9242287C7C99005CEE03 /* CreateNewAccountVC.swift in Sources */,
 				E59B9230287C304C005CEE03 /* UITextField+Extensions.swift in Sources */,
 				E524393A2876D92C00EB866D /* Entity.swift in Sources */,
+				E5580FE5288032740014522A /* CreateNewAccountView.swift in Sources */,
+				E5580FE9288055F50014522A /* PopUpVc.swift in Sources */,
 				E5580FD3287DA96F0014522A /* MapPresenter.swift in Sources */,
+				E5580FE7288033DE0014522A /* Popup.swift in Sources */,
 				E59B9226287C18EF005CEE03 /* UIStackView+Extension.swift in Sources */,
 				E59B9224287C15BC005CEE03 /* UIbutton+Extension .swift in Sources */,
+				E5580FE0288032020014522A /* MapVC.swift in Sources */,
 				E5580FD0287DA5440014522A /* CreateNewAccountPresenter.swift in Sources */,
 				E59B9228287C289B005CEE03 /* UILabel + Extension.swift in Sources */,
-				E59B9243287C7C99005CEE03 /* CreateNewAccountView.swift in Sources */,
 				E59B9246287C7D54005CEE03 /* CreateNewAccountInteractor.swift in Sources */,
+				E5580FF2288162870014522A /* ForgotPasswordInteractor.swift in Sources */,
 				E5960AB0287718720014DF70 /* FirebaseService.swift in Sources */,
+				E5580FD7288015C20014522A /* UIViewController+Extension.swift in Sources */,
 				E5094D0D2876EC6100C016A7 /* LocationManager.swift in Sources */,
-				E59B923F287C7C6A005CEE03 /* MapVC.swift in Sources */,
 				E524391D2876D75300EB866D /* AppDelegate.swift in Sources */,
+				E5580FF4288162CF0014522A /* ForgotPasswordRouter.swift in Sources */,
 				E59B9239287C6570005CEE03 /* SignInInteractor.swift in Sources */,
+				E5580FEE28815D250014522A /* ForgotPasswordView.swift in Sources */,
 				E524391F2876D75300EB866D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

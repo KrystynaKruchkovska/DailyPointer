@@ -14,6 +14,5 @@ extension UIButton {
         self.setTitleColor(titleColor, for: .normal)
         self.backgroundColor = backgroundColor
         self.layer.cornerRadius = 5
-  
     }
 }

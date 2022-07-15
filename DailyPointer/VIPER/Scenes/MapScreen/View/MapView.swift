@@ -21,6 +21,9 @@ class MapView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        
+        mapView.addSubview(signOutButton)
+        signOutButton.anchor(top: mapView.safeAreaLayoutGuide.topAnchor, right: mapView.safeAreaLayoutGuide.rightAnchor, rightConstant: 16, widthConstant: 50, heightConstant: 50)
         self.addSubview(mapView)
         mapView.anchor(canterXAnchor: self.centerXAnchor, canterYAnchor: self.centerYAnchor, widthConstant: self.frame.width, heightConstant: self.frame.height)
     }
@@ -32,5 +35,15 @@ class MapView: UIView {
         return map
     }()
     
-    
+    var signOutButton: UIButton = {
+        var image = UIImage(systemName: "rectangle.portrait.and.arrow.right")
+        
+        var button = UIButton(type: .custom)
+        button.setImage(image, for: .normal)
+        button.imageView?.layer.transform = CATransform3DMakeScale(1.2, 1.2, 1.2)
+        button.clipsToBounds = true
+        button.tintColor = .systemYellow
+
+        return button
+    }()
 }

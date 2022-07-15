@@ -11,10 +11,7 @@ import RxSwift
 
 protocol SignInViewProtocol {
     var presenter: SignInPresenterProtocol? { get set }
-    func update(with user: FireBaseUser)
-    func update(with error: Error)
 }
-
 
 class WelcomeViewController: UIViewController, SignInViewProtocol {
     var presenter: SignInPresenterProtocol?
@@ -27,31 +24,33 @@ class WelcomeViewController: UIViewController, SignInViewProtocol {
         let welcomeView = WelcomeView()
         view = welcomeView
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        [welcomeView.emailTextField,
+         welcomeView.passwordTextField].forEach { textField in
+            textField.delegate = self
+        }
+
     }
     
     override func viewDidLayoutSubviews() {
         welcomeView.createNewAccountBtn.addTarget(self, action: #selector(pressedCreateNewAccount(sender:)), for: .touchUpInside)
+        welcomeView.forgotPassword.addTarget(self, action: #selector(pressedForgotPassword(sender:)), for: .touchUpInside)
         welcomeView.logInBtn.addTarget(self, action: #selector(pressedlogInBtn(sender:)), for: .touchUpInside)
     }
     
     @objc func pressedCreateNewAccount(sender: UIButton) {
-        presenter?.router?.showCreateNewAccountVC()
+        presenter?.showCreateNewAccountVC()
+    }
+    
+    @objc func pressedForgotPassword(sender: UIButton) {
+        presenter?.showForgotPasswordVC()
     }
     
     @objc func pressedlogInBtn(sender: UIButton) {
         presenter?.signIn(authType: .email, credentials: EmailCredentials(email: welcomeView.emailTextField.text ?? "", password: welcomeView.passwordTextField.text ?? ""))
-    }
-    
-    func update(with user: FireBaseUser) {
-     
-        self.presenter?.router?.showMapViewController(user: user)
-        print("[USER] SIGNED IN")
-    }
-    func update(with error: Error) {
-        self.presenter?.router?.showAlertVC(title: "Oops", messsage: error.localizedDescription)
-        print("[ERROR] SIGNED IN \(error)")
     }
 }
 

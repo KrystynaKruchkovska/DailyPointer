@@ -19,14 +19,19 @@ class NewAccountView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        self.backgroundColor = .yellow
         self.addSubview(vStackView)
         vStackView.anchor(top:self.safeAreaLayoutGuide.topAnchor, left: self.leftAnchor, right: self.rightAnchor, topConstant: 20, bottomConstant: 0, leftConstant: 20, rightConstant: 20)
         [nickNameTextField, emailTextField, passwordTextField, nextBtn].forEach{ view in
-            view.anchor(heightConstant: 50)
+            view.anchor(heightConstant: 30)
             vStackView.addArrangedSubview(view)
-            
         }
 
+    
+        let tap = UITapGestureRecognizer(target: self, action:
+        #selector(dismissKeyboard))
+        self.addGestureRecognizer(tap)
+        
     }
     
     var vStackView: UIStackView = {
@@ -47,6 +52,8 @@ class NewAccountView: UIView {
     
     var passwordTextField: UITextField = {
         var textField = UITextField(placeholder: "password", textColor: .blue)
+        textField.isSecureTextEntry = true
+        textField.enablePasswordToggle()
         return textField
     }()
     
@@ -54,5 +61,10 @@ class NewAccountView: UIView {
         var button = UIButton(title: "Next", backgroundColor: .systemBlue, titleColor: .white)
         return button
     }()
+    
+    
+    @objc func dismissKeyboard (_ sender: UITapGestureRecognizer) {
+        [nickNameTextField, passwordTextField, emailTextField].forEach({$0.resignFirstResponder()})
+    }
 }
 

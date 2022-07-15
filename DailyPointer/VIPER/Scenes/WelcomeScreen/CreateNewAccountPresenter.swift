@@ -9,37 +9,34 @@ import Foundation
 
 protocol CreateNewAccountPresenterProtocol: AnyObject {
     var view: CreateNewAccountViewProtocol? { get set }
-    var router: AnyRouter? { get set }
+    var router: LogInRouterProtocol? { get set }
     var interactor: CreateNewAccountInteractorProtocol? { get set }
     func createNewUser(_ user: UserBaseData)
+    func showEmailSendPopUp()
 }
 
 
 class CreateNewAccountPresenter: CreateNewAccountPresenterProtocol {
-    var view: CreateNewAccountViewProtocol?
-    
-    var router: AnyRouter?
-    
     var interactor: CreateNewAccountInteractorProtocol?
+    var view: CreateNewAccountViewProtocol?
+    var router: LogInRouterProtocol?
+   
     
     func createNewUser(_ user: UserBaseData) {
         interactor?.createNewUser(user, handler: { [weak self] result in
             
             switch result {
             case .success:
-                print("[NEW USER CREATED]")
+                DispatchQueue.main.async {
+                    self?.router?.showPoUpView(with: "Check Your email")
+//                    self?.router?.popToRootViewController()
+                }
             case .failure(let error):
-                print("[NEW USER FAILD while CREATING] \(error)")
-
-            }
-            if let rootVC = self?.router?.entryPoint {
-                rootVC.navigationController?.popViewController(animated: true)
+                self?.router?.showAlertVC(title: "Error", messsage: error.localizedDescription, actions: [.signIn])
             }
         })
     }
-    
-    init() {
-        self.interactor = CreateNewAccountInteractor()
+    func showEmailSendPopUp() {
+        print("[MAIL SEND]")
     }
-    
 }

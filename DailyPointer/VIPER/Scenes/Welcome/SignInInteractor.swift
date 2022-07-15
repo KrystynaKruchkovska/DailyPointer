@@ -14,11 +14,8 @@ protocol SignInInteractorProtocol {
 
 class SignInInteractor: SignInInteractorProtocol {
     weak var presenter: SignInPresenterProtocol?
-    var authService: AnyFirebaseAuthService
+    private var authService: AuthServiceProtocol = FirebaseAuthService.shared
     
-    init() {
-        self.authService = FirebaseAuthService()
-    }
 
     func signIn(authType: AuthTypes, credentials: AnyCredetials, handler: @escaping(Result<FireBaseUser, Error>)->()) {
         authService.singIn(with: authType, credentials: credentials) { result in
