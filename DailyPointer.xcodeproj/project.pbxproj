@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		371093D580B980C93F86B481 /* Pods_DailyPointer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34F0F6C4BD64FD0A6F14F7B7 /* Pods_DailyPointer.framework */; };
-		E5094D0D2876EC6100C016A7 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5094D0C2876EC6100C016A7 /* LocationManager.swift */; };
+		E5094D0D2876EC6100C016A7 /* DeviceLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5094D0C2876EC6100C016A7 /* DeviceLocationService.swift */; };
 		E524391D2876D75300EB866D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524391C2876D75300EB866D /* AppDelegate.swift */; };
 		E524391F2876D75300EB866D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E524391E2876D75300EB866D /* SceneDelegate.swift */; };
 		E52439262876D75400EB866D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E52439252876D75400EB866D /* Assets.xcassets */; };
@@ -32,6 +32,7 @@
 		E5580FF0288161E30014522A /* ForgotPasswordPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FEF288161E30014522A /* ForgotPasswordPresenter.swift */; };
 		E5580FF2288162870014522A /* ForgotPasswordInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FF1288162870014522A /* ForgotPasswordInteractor.swift */; };
 		E5580FF4288162CF0014522A /* ForgotPasswordRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FF3288162CF0014522A /* ForgotPasswordRouter.swift */; };
+		E5580FF62881AD7C0014522A /* CustomPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5580FF52881AD7C0014522A /* CustomPin.swift */; };
 		E5960AAD2877151A0014DF70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5960AAC2877151A0014DF70 /* GoogleService-Info.plist */; };
 		E5960AB0287718720014DF70 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AAF287718720014DF70 /* FirebaseService.swift */; };
 		E5960AB328771A130014DF70 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5960AB228771A130014DF70 /* WelcomeVC.swift */; };
@@ -50,7 +51,7 @@
 		34F0F6C4BD64FD0A6F14F7B7 /* Pods_DailyPointer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyPointer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC7F0D44E34D7005EE118A04 /* Pods-DailyPointer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyPointer.release.xcconfig"; path = "Target Support Files/Pods-DailyPointer/Pods-DailyPointer.release.xcconfig"; sourceTree = "<group>"; };
 		AD25847CE1510D5C032DB3A6 /* Pods-DailyPointer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyPointer.debug.xcconfig"; path = "Target Support Files/Pods-DailyPointer/Pods-DailyPointer.debug.xcconfig"; sourceTree = "<group>"; };
-		E5094D0C2876EC6100C016A7 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		E5094D0C2876EC6100C016A7 /* DeviceLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceLocationService.swift; sourceTree = "<group>"; };
 		E52439192876D75300EB866D /* DailyPointer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyPointer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E524391C2876D75300EB866D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E524391E2876D75300EB866D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +77,7 @@
 		E5580FEF288161E30014522A /* ForgotPasswordPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordPresenter.swift; sourceTree = "<group>"; };
 		E5580FF1288162870014522A /* ForgotPasswordInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordInteractor.swift; sourceTree = "<group>"; };
 		E5580FF3288162CF0014522A /* ForgotPasswordRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRouter.swift; sourceTree = "<group>"; };
+		E5580FF52881AD7C0014522A /* CustomPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPin.swift; sourceTree = "<group>"; };
 		E5960AAC2877151A0014DF70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E5960AAF287718720014DF70 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		E5960AB228771A130014DF70 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -119,14 +121,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E5094D0B2876EC4A00C016A7 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				E5094D0C2876EC6100C016A7 /* LocationManager.swift */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
 		E52439102876D75300EB866D = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +144,6 @@
 			children = (
 				E59B9220287C0F5F005CEE03 /* Extensions */,
 				E5960AAE287718620014DF70 /* Services */,
-				E5094D0B2876EC4A00C016A7 /* Manager */,
 				E52439302876D88100EB866D /* VIPER */,
 				E524391C2876D75300EB866D /* AppDelegate.swift */,
 				E524391E2876D75300EB866D /* SceneDelegate.swift */,
@@ -188,6 +181,7 @@
 			children = (
 				E5580FDF288032020014522A /* MapVC.swift */,
 				E5580FCD287D770E0014522A /* MapView.swift */,
+				E5580FF52881AD7C0014522A /* CustomPin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +221,7 @@
 			children = (
 				E5960AAF287718720014DF70 /* FirebaseService.swift */,
 				E5960AB62878179D0014DF70 /* FireBaseAuthService.swift */,
+				E5094D0C2876EC6100C016A7 /* DeviceLocationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -428,11 +423,12 @@
 				E5580FF2288162870014522A /* ForgotPasswordInteractor.swift in Sources */,
 				E5960AB0287718720014DF70 /* FirebaseService.swift in Sources */,
 				E5580FD7288015C20014522A /* UIViewController+Extension.swift in Sources */,
-				E5094D0D2876EC6100C016A7 /* LocationManager.swift in Sources */,
+				E5094D0D2876EC6100C016A7 /* DeviceLocationService.swift in Sources */,
 				E524391D2876D75300EB866D /* AppDelegate.swift in Sources */,
 				E5580FF4288162CF0014522A /* ForgotPasswordRouter.swift in Sources */,
 				E59B9239287C6570005CEE03 /* SignInInteractor.swift in Sources */,
 				E5580FEE28815D250014522A /* ForgotPasswordView.swift in Sources */,
+				E5580FF62881AD7C0014522A /* CustomPin.swift in Sources */,
 				E524391F2876D75300EB866D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

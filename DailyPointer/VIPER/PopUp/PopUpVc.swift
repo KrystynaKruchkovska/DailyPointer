@@ -10,7 +10,6 @@ import UIKit
 class PopUpViewController: UIViewController, ViewActionDelegate{
     var animationHandler: ((Bool) -> ())?
     
-
     private var popup: Popup? {
         return view as? Popup
     }

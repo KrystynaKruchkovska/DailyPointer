@@ -45,8 +45,8 @@ protocol LogInRouterProtocol: BaseRouter {
     static func start() -> LogInRouterProtocol
     func showCreateNewAccountVC()
     func showForgotPasswordVC()
-    func showMapViewController(user: FIRUser)
     func popToRootViewController()
+    func showMapViewController(user: FIRUser)
 }
 
 
@@ -82,6 +82,29 @@ class LogInRouter: LogInRouterProtocol {
         return router
     }
     
+//    func showLogInVC() {
+//        
+//        let router = LogInRouter()
+//        
+//        //Asign VIP
+//        var view: SignInViewProtocol = WelcomeViewController()
+//        let presenter: SignInPresenterProtocol = SigninPresenter()
+//        var interactor: SignInInteractorProtocol = SignInInteractor()
+//        
+//        view.presenter = presenter
+//        
+//        interactor.presenter = presenter
+//        
+//        presenter.router = router
+//        presenter.interactor = interactor
+//        presenter.view = view
+//        
+//        router.entryPoint = view as? EntryPoint
+//        router.rootViewController = view as? UIViewController
+//        
+//
+//    }
+//    
     func showCreateNewAccountVC() {
         var createNewAccountVC: CreateNewAccountViewProtocol = CreateNewAccountVC()
         var interactor: CreateNewAccountInteractorProtocol = CreateNewAccountInteractor()
@@ -99,7 +122,7 @@ class LogInRouter: LogInRouterProtocol {
     }
     
     func showMapViewController(user: FIRUser) {
-        var createMapView: MapViewProtocol = MapViewController(locationManager: LacationManager(), user: user)
+        var createMapView: MapViewProtocol = MapViewController(user: user)
         let presenter: MapPresenterProtocol = MapPresenter()
         var interactor: MapInteractorProtocol = MapInteractor()
         createMapView.presenter = presenter
@@ -116,11 +139,7 @@ class LogInRouter: LogInRouterProtocol {
         
         rootViewController?.navigationController?.pushViewController(createMapView as! UIViewController, animated: true)
     }
-    
-    func popToRootViewController() {
-        rootViewController?.navigationController?.popToRootViewController(animated: true)
-    }
-    
+        
     func showAlertVC(title: String, messsage: String, actions: [AlertActionTypes]?) {
         let alert = UIAlertController(title: title, message: messsage, preferredStyle: .actionSheet)
         
@@ -154,7 +173,11 @@ class LogInRouter: LogInRouterProtocol {
             UIApplication.shared.open(mailURL)
         }
     }
-        
+    
+    func popToRootViewController() {
+        rootViewController?.navigationController?.popToRootViewController(animated: true)
+    }
+    
     func showForgotPasswordVC() {
         var forgotPasswordVC: ForgotPasswordViewProtocol = ForgotPasswordVC()
         var interactor: ForgotPasswordInteractorProtocol = ForgotPasswordInteractor()

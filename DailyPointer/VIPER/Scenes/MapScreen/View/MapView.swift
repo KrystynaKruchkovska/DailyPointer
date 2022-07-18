@@ -18,14 +18,18 @@ class MapView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        self.backgroundColor = .systemYellow
         mapView.addSubview(signOutButton)
         signOutButton.anchor(top: mapView.safeAreaLayoutGuide.topAnchor, right: mapView.safeAreaLayoutGuide.rightAnchor, rightConstant: 16, widthConstant: 50, heightConstant: 50)
         self.addSubview(mapView)
-        mapView.anchor(canterXAnchor: self.centerXAnchor, canterYAnchor: self.centerYAnchor, widthConstant: self.frame.width, heightConstant: self.frame.height)
+        mapView.anchor(canterXAnchor: self.centerXAnchor,
+                       canterYAnchor: self.centerYAnchor,
+                       top: self.topAnchor,
+                       bottom: self.bottomAnchor,
+                       left: self.leftAnchor,
+                       right: self.rightAnchor)
     }
     
     var mapView: MKMapView = {
@@ -46,4 +50,8 @@ class MapView: UIView {
 
         return button
     }()
+    
+    func addPin(annotation: CustomPin) {
+        mapView.addAnnotation(annotation)
+    }
 }

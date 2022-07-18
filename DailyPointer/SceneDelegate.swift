@@ -22,8 +22,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: sceneWindow)
         window.makeKeyAndVisible()
         window.rootViewController = UINavigationController(rootViewController: initialVC)
+        
         self.window = window
         
+        if FirebaseAuthService.shared.isUserSignedIn {
+            guard let user = FirebaseAuthService.shared.currentUser else {
+                return
+            }
+            DispatchQueue.main.async {
+                userRouter.showMapViewController(user: user)
+            }
+        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

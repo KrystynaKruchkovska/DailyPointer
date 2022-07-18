@@ -29,6 +29,8 @@ protocol AuthServiceProtocol {
     func sendVerificationEmail(user:FIRUser, handler:@escaping (_ error:Error?)->())
     func signOut(handler: @escaping (Error?)->())
     func resetPassword(email: String, handler: @escaping (_ error:Error?) -> ())
+    var isUserSignedIn: Bool { get }
+    var currentUser: FIRUser? { get }
 }
 
 struct FacebookCredentials: AnyCredetials {
@@ -44,9 +46,17 @@ struct GoogleCredentials: AnyCredetials {
 
 
 class FirebaseAuthService: AuthServiceProtocol {
+    var currentUser: FIRUser? {
+        return FireBaseUser(user: Auth.auth().currentUser!)
+    }
+    
+    var isUserSignedIn: Bool {
+        return Auth.auth().currentUser != nil
+    }
+    
     
     static let shared = FirebaseAuthService()
-    
+
     private init() {}
     
     func singIn(with authType: AuthTypes, credentials: AnyCredetials, handler: @escaping (Result<FireBaseUser,Error>)->()) {

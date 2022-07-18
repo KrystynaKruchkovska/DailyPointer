@@ -13,7 +13,6 @@ protocol ForgotPasswordInteractorProtocol {
 }
 
 class ForgotPasswordInteractor: ForgotPasswordInteractorProtocol {
-    
     private var authServise: AuthServiceProtocol? = FirebaseAuthService.shared
     var presenter: ForgotPasswordPresenterProtocol?
     
@@ -22,5 +21,4 @@ class ForgotPasswordInteractor: ForgotPasswordInteractorProtocol {
             handler(error)
         }
     }
-    
 }
