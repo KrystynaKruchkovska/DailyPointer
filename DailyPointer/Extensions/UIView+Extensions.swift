@@ -45,3 +45,15 @@ extension UIView {
         }
     }
 }
+
+extension UIView {
+    func edge(to view: UIView) {
+        view.addSubview(self)
+        self.anchor(top: view.topAnchor, bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor)
+    }
+    
+    func pinMenu(to view: UIView, with constant: CGFloat) {
+        view.addSubview(self)
+        self.anchor( top: view.topAnchor, bottom: view.bottomAnchor, left: view.leftAnchor, right: view.rightAnchor, rightConstant: constant )
+    }
+}
